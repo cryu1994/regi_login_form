@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>here we are at the success page</title>
+  </head>
+  <body>
+    {{ all_user }}
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Date Created</th>
+      </tr>
+      <tr>
+        {% for user in all_user%}
+        <td>{{user['first_name']}}</td>
+        <td>{{user['last_name']}}</td>
+        <td>{{user['email']}}</td>
+        <td>{{user['created_at']}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
